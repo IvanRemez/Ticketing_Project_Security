@@ -45,6 +45,7 @@ public class SecurityConfig {
 //                .antMatchers("/project/**").hasRole("MANAGER")
 //                .antMatchers("/task/employee/**").hasRole("EMPLOYEE")
 //                .antMatchers("/task/**").hasRole("MANAGER")
+                // ^^ allowing certain Roles to view certain pages
 //                .antMatchers("/task/**").hasAnyRole("EMPLOYEE", "ADMIN")
 //                .antMatchers("/task/**").hasAuthority("ROLE_EMPLOYEE")
 //                                               // NEED _ (underscore) ^^
