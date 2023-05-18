@@ -20,14 +20,15 @@ public class AuthSuccessHandler implements AuthenticationSuccessHandler {
         Set<String> roles = AuthorityUtils.authorityListToSet(authentication.getAuthorities());
     // ^^ User can have more than 1 role
 
+    // determines landing page based on User's role
         if (roles.contains("Admin")) {
             response.sendRedirect("/user/create");
         }
         if (roles.contains("Manager")) {
-            response.sendRedirect("/task/create");
+            response.sendRedirect("/project/create");
         }
         if (roles.contains("Employee")) {
-            response.sendRedirect("/task/employee");
+            response.sendRedirect("/task/employee/pending-tasks");
         }
     }
 }
