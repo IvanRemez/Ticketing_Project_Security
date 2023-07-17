@@ -9,6 +9,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+// NO @Component b/c our User (Entity) is NOT auto-injected.
+// It is retrieved from DB using loadUserByUserName() method,
+// found inside SecurityServiceImpl class
+
 public class UserPrincipal implements UserDetails {
 // Mapper class used to map User Entity fields unto Security User obj. used by Spring
 // UserDetails object required by Spring Security
