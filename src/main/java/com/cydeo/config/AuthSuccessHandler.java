@@ -15,7 +15,8 @@ import java.util.Set;
 public class AuthSuccessHandler implements AuthenticationSuccessHandler {
 
     @Override
-    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
+    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
+                                        Authentication authentication) throws IOException, ServletException {
 
         Set<String> roles = AuthorityUtils.authorityListToSet(authentication.getAuthorities());
     // ^^ User can have more than 1 role

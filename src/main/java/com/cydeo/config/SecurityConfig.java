@@ -50,7 +50,7 @@ public class SecurityConfig {
                 // ^^ allowing certain Roles to view certain pages
 //                .antMatchers("/task/**").hasAnyRole("EMPLOYEE", "ADMIN")
 //                .antMatchers("/task/**").hasAuthority("ROLE_EMPLOYEE")
-//                                               // NEED _ (underscore) ^^
+//                                                 // NEED _ ^^ (underscore)
                 .antMatchers(
                         "/",
                         "/login",
